@@ -66,6 +66,15 @@ Introduce Charts on top of the WebSockets
 	Command: pip install .\TA_Lib-0.4.19-cp39-cp39-win_amd64.whl
 	SOLVED!!!
 
-**Numpy and CSV	**
+**Numpy and CSV**
 	https://stackoverflow.com/questions/25614749/how-to-import-csv-file-as-numpy-array-in-python
 	
+**Flask**
+	https://flask.palletsprojects.com/en/1.1.x/
+	Command: pip install flask
+	Command: $env:FLASK_ENV="development"
+	Command: $env:FLASK_APP = "app.py"
+	Command: flask run
+
+**Jinja Flask Templates**	
+	https://jinja.palletsprojects.com/en/2.11.x/

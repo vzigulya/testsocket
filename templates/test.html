@@ -2,9 +2,24 @@
 	<head>
 		<title>Test Socket</title>
 		<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" >
 	</head>
 	<body>
 		<h3>Settings</h3>
+		<div>
+			<!-- {'asset': 'BTC', 'free': '0.00000000', 'locked': '0.00000000'} -->
+			<table>
+			{% for balance in my_balances %}
+			 	{% if balance['free'] != '0.00000000'    %}
+				<tr> 
+					<td>{{ balance['asset'] }} </td>
+					<td>{{ balance['free'] }}</td>
+					<td>{{ balance['locked'] }}</td>
+				</tr>
+				{% endif %}	
+			{% endfor %}
+			</table>
+		</div>
 		<div id = "settings">
 			<input type = "checkbox"/>RSI
 			<input type = "text" id="rsi_length" name="rsi_length" placeholder="14"/>
@@ -15,7 +30,7 @@
 			
 		</div>
 		<br>
-		<h3>Trades</h3>
+		<h3>{{title}}</h3>
 		<div id = "chart"></div>
 		<script>
 			
@@ -35,6 +50,6 @@
 			});
 		
 		</script>
-		<script src="chart.js"></script>
+		<script src="{{ url_for('static', filename='chart.js') }}"></script>
 	</body>
 </HTML>
