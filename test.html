@@ -1,0 +1,40 @@
+<HTML>
+	<head>
+		<title>Test Socket</title>
+		<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+	</head>
+	<body>
+		<h3>Settings</h3>
+		<div id = "settings">
+			<input type = "checkbox"/>RSI
+			<input type = "text" id="rsi_length" name="rsi_length" placeholder="14"/>
+			Overbought 
+			<input type = "text" id="rsi_overbought" name="rsi_overbought" placeholder="70"/>
+			Oversold
+			<input type = "text" id="rsi_oversold" name="rsi_oversold" placeholder="30"/>
+			
+		</div>
+		<br>
+		<h3>Trades</h3>
+		<div id = "chart"></div>
+		<script>
+			
+		
+		    //https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#examples
+			// Create WebSocket connection.
+			const socket = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
+
+			// Connection opened
+			socket.addEventListener('open', function (event) {
+				socket.send('Connected to the server');
+			});
+
+			// Listen for messages
+			socket.addEventListener('message', function (event) {
+				console.log('Message from server ', event.data);
+			});
+		
+		</script>
+		<script src="chart.js"></script>
+	</body>
+</HTML>
