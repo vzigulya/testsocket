@@ -45,7 +45,7 @@ for x in bal['balances']:
         # , 'isSpotTradingAllowed': True, 'isMarginTradingAllowed': False
         # , 'filters': [{'filterType': 'PRICE_FILTER', 'minPrice': '0.00010000', 'maxPrice': '1000.00000000', 'tickSize': '0.00010000'}
         # , {'filterType': 'PERCENT_PRICE', 'multiplierUp': '5', 'multiplierDown': '0.2', 'avgPriceMins': 5}
-        # , {'filterType': 'LOT_SIZE', 'minQty': '0.10000000', 'maxQty': '90000.00000000', 'stepSize': '0.10000000'}
+        # , {'filterType': 'LOT_SIZE', 'minQty': '0.10000000', 'maxQty': '90000.00000000', 'stepSize': '0.10000000'}git
         # , {'filterType': 'MIN_NOTIONAL', 'minNotional': '10.00000000', 'applyToMarket': True, 'avgPriceMins': 5}
         # , {'filterType': 'ICEBERG_PARTS', 'limit': 10}
         # , {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '10000.00000000', 'stepSize': '0.00000000'}
@@ -53,14 +53,13 @@ for x in bal['balances']:
         # , 'permissions': ['SPOT']}
    
 
-# buy_order_limit = client.create_test_order(
-#      symbol='ETHUSDT',p
+# https://binance-docs.github.io/apidocs/spot/en/#new-order-trade
+# buy_order_limit = client.create_order(
+#      symbol='ETHUSDT',
 #      side='BUY',
-#      type='LIMIT',
-#      timeInForce='GTC',
+#      type='MARKET',
 #      timestamp = Timestamp,
-#      quantity=100,
-#      price=754.77)
+#      quantity=1)
 # print(buy_order_limit)
 # print(client.get_my_trades('BTCUSDT'))    
 
