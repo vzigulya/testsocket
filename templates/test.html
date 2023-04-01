@@ -20,6 +20,25 @@
 			{% endfor %}
 			</table>
 		</div>
+		<h3>MyTrades</h3>
+		<div>
+			<!-- [{'symbol': 'XRPUSDT', 'id': 318757, 'orderId': 3043247, 'orderListId': -1, 'price': '0.53260000'
+				, 'qty': '250.00000000', 'quoteQty': '133.15000000', 'commission': '0.00000000'
+				, 'commissionAsset': 'XRP', 'time': 1680226475450, 'isBuyer': True, 'isMaker': False, 'isBestMatch': True}, ... ]
+			-->
+			<table>
+			{% for trade in my_trades %}
+			 	
+				<tr> 
+					<td>{{ trade['symbol'] }} </td>
+					<td>{{ trade['price'] }}</td>
+					<td>{{ trade['qty'] }}</td>
+					<td>{{ trade['isBuyer'] }}</td>
+				</tr>
+				
+			{% endfor %}
+			</table>
+		</div>
 		<div id = "settings">
 			<h3>Settings</h3>
 			<input type = "checkbox"/>RSI
