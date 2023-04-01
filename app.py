@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 client = Client(config.API_KEY, config.API_SECRET)
-
+client.API_URL = config.API_URL
 
 # ROUTES
 @app.route('/')

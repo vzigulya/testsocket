@@ -8,9 +8,10 @@ client.API_URL = config.API_URL
 
 # https://binance-docs.github.io/apidocs/spot/en/#new-order-trade
 buy_order_limit = client.create_order(
-     symbol='ETHUSDT',
+     symbol='XRPUSDT',
      side='BUY',
      type='MARKET',
      timestamp = Timestamp,
-     quantity=1)
+     quantity=30
+     )
 print(buy_order_limit)

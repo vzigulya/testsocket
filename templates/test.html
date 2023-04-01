@@ -5,7 +5,7 @@
 		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" >
 	</head>
 	<body>
-		<h3>Settings</h3>
+		<h3>Balance</h3>
 		<div>
 			<!-- {'asset': 'BTC', 'free': '0.00000000', 'locked': '0.00000000'} -->
 			<table>
@@ -21,6 +21,7 @@
 			</table>
 		</div>
 		<div id = "settings">
+			<h3>Settings</h3>
 			<input type = "checkbox"/>RSI
 			<input type = "text" id="rsi_length" name="rsi_length" placeholder="14"/>
 			Overbought 
@@ -37,7 +38,7 @@
 		
 		    //https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#examples
 			// Create WebSocket connection.
-			const socket = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
+			const socket = new WebSocket('wss://stream.binance.com:9443/ws/xrpusdt@trade');
 
 			// Connection opened
 			socket.addEventListener('open', function (event) {

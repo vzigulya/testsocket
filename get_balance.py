@@ -1,14 +1,13 @@
 from sqlite3 import Time, Timestamp
-import config, csv, hashlib, time,  requests, json,urllib3,  urllib
+import config.config as config, csv, hashlib, time,  requests, json,urllib3,  urllib
 from binance.client import Client
 
 
 client = Client(config.API_KEY, config.API_SECRET)
 client.API_URL = config.API_URL
 
-
-
 bal = client.get_account()
+
     # JSON example
     # {'makerCommission': 0, 'takerCommission': 0, 'buyerCommission': 0, 'sellerCommission': 0
     # , 'canTrade': True, 'canWithdraw': False, 'canDeposit': False, 'updateTime': 1642978832225, 
